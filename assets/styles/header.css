@@ -1,0 +1,9 @@
+header{
+    grid-area: header;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ddecfa;
+    border-radius: 15px;
+    border: #014e98 3px solid;
+}

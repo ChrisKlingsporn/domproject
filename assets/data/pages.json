@@ -1,0 +1,12 @@
+{ 
+    
+        "pages":[
+            {"page":"home", "title":"Cold Coffee Gaming Home", "content": ""},
+            {"page":"community", "title":"Cold Coffee Gaming Community", "content": ""},
+            {"page":"contact", "title":"Cold Coffee Gaming Contact", "content": ""},
+            {"page":"rules", "title":"Cold Coffee Gaming Rules and Regulations", "content": ""},
+            {"page":"news", "title":"Cold Coffee Gaming News", "content": ""},
+            {"page":"curators", "title":"Cold Coffee Gaming Curators", "content": ""},
+            {"page":"partners", "title":"Cold Coffee Gaming Partner Gaming Servers", "content": ""}
+        ]
+    }

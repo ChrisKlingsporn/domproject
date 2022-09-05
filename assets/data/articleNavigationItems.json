@@ -1,0 +1,8 @@
+{
+        "articleNavigationItems":[
+            {"id":"00001", "title":"Elzwijn's request", "game": "LoZTP", "curator":"Iggster"},
+            {"id":"00002", "title":"Dragon1983's issue", "game": "Modern Combat Versus", "curator":"Iggster"},
+            {"id":"00003", "title":"Ssagnoss' problem", "game": "Escape From Tarkov", "curator":"Buzz"},
+            {"id":"00004", "title":"Buzz's ticket", "game": "Rust", "curator":"Iggster"}
+        ]
+    }
