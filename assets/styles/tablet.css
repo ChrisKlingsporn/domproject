@@ -1,3 +1,65 @@
+/*applies to under 980px */
 Body{
+    Display:grid;
+    grid-template-columns:4fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer";
     background-color: #4885c5;
     }
+
+#firstArticle{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "meta image"
+    "intro intro"
+    "solution solution";
+}
+
+#secondArticle{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "meta image"
+    "intro intro"
+    "solution solution";
+}
+
+#thirdArticle{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "meta image"
+    "intro intro"
+    "solution solution";
+}
+
+#fourthArticle{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "meta image"
+    "intro intro"
+    "solution solution";
+}
+
+#fifthArticle{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "meta image"
+    "intro intro"
+    "solution solution";
+}
+
+#sixthArticle{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "meta image"
+    "intro intro"
+    "solution solution";
+}

@@ -1,0 +1,11 @@
+.card{
+    display:flex;
+    flex-direction:column;
+    background-color:#ddecfa;
+    border-radius:15px;
+    border:#4885c5 2px solid;
+    padding:5px;
+    gap:5px;
+    margin:5px;
+    box-shadow:black 2px 2px; 
+}
