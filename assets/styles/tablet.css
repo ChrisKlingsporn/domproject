@@ -6,9 +6,35 @@ Body{
     "header header"
     "nav nav"
     "main aside"
-    "footer footer";
+    "footer aside";
     background-color: #4885c5;
-    }
+}
+
+nav.card{
+    display:flex;
+    flex-direction:row;
+}
+
+nav{
+    position: relative;
+}
+
+
+#navigation{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+#navLogo{
+    width:70%;
+    border-radius:35%;
+}
+
+#navHomeButton{
+    width:20%;
+    border-radius:50%;
+}
+
 
 #firstArticle{
     display:grid;

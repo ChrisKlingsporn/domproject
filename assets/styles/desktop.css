@@ -3,10 +3,6 @@
     padding:0;
 }
 
-h1{
-    
-}
-
 body{
     display:grid;
     background-color:#4885c5;
@@ -24,6 +20,14 @@ nav{
     height:auto;
 }
 
+.navItem{
+    border:2px solid #4885c5;
+    border-radius:8px;
+    margin-top:4px;
+    margin-bottom:4px;
+    padding:4px;
+}
+
 section{
     grid-area:main;
     background-color:#4885c5;
@@ -39,6 +43,28 @@ article{
 aside{
     grid-area:aside;
 }
+
+footer{
+    height:600px;
+}
+
+input{
+    background-color:#ddecfa;
+}
+
+input:invalid{
+    background-color: darksalmon;
+}
+
+.schticky{
+    position: sticky;
+    top:0;
+}
+
+.card .active{
+    box-shadow:inset 10px 5px 15px #014E98;
+}
+
 .articleMeta{
     grid-area:meta;
 }
@@ -64,6 +90,11 @@ aside{
 
 #navHomeButton{
     border-radius:50%;
+}
+
+#navigation{
+    padding:5px;
+    list-style:none;
 }
 
 #firstArticle{

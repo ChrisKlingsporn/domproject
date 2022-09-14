@@ -21,6 +21,10 @@ Body{
     "solution";
 }
 
+#navHomeButton{
+    display:none;
+}
+
 #secondArticle{
     display:grid;
     grid-template-columns: 1fr;

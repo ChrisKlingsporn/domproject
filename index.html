@@ -10,14 +10,8 @@
 <body>
     <nav class="card">
         <button id="navHomeButton"><img src="assets/graphics/images/Logo_witte_outlines.png" id="navLogo"></button>
-        <div class="navItems">
-            <ul>
-                <li>article 1</li>
-                <li>article 2</li>
-                <li>article 3</li>
-                <li>article 4</li>
-                <li>article 5</li>
-                <li>article 6</li>
+        <div class="navItems card"> <!-- dynamically added class="schticky" with js-->
+            <ul id="navigation" class=""><!-- li's gets populated by script.js -->   
             </ul>
         </div>
     </nav>
@@ -30,9 +24,9 @@
         <h2>Cold Coffee Curators</h2>
         <p>The articles below are examples, please do not reference.</p>
         <!-- TODO:make every article refer to articleNavigationItems.json objects-->
-        <article id="firstArticle" class="card">
+        <article id="firstArticle" class="card" data-article="First Article">
             <div class="articleMeta">
-                <h2 class="articleTitle">--title--</h2>
+                <h2 class="articleTitle">Article 1</h2>
                 <h2 class="articleGame">--game--</h2>
                 <h2 class="articleCurator">--curator--</h2>
             </div>
@@ -40,9 +34,9 @@
             <div class="articleSolution"><h2>Article solution</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro distinctio quae officiis hic accusantium quas iste omnis fugiat. Veritatis officia quia nihil, totam numquam architecto. Aut, nemo! Quas quasi fugiat, dignissimos, repellat commodi mollitia velit asperiores quis placeat eveniet fuga quisquam laboriosam ut natus optio temporibus iste praesentium, cupiditate magnam error? Reprehenderit placeat similique dignissimos cupiditate quae. Corrupti neque rem delectus deserunt sapiente consequuntur qui debitis aliquid officiis, accusantium perferendis maxime deleniti voluptas maiores consectetur quis similique, aut nesciunt! Est accusantium ipsum, dolor aspernatur magni numquam dignissimos necessitatibus porro molestiae obcaecati sit cupiditate, totam ab veritatis quam voluptatum repudiandae error consectetur, expedita rem nisi impedit ipsa. Cum neque maxime temporibus voluptatum nulla nemo, nisi aut. Quam eius suscipit officiis tempora.</p></div>
             <img src="/assets/graphics/images/among us 350px.jpg" class="articleImage"></img>
         </article>
-        <article id="secondArticle" class="card">
+        <article id="secondArticle" class="card" data-article="Second Article">
             <div class="articleMeta">
-                <h2 class="articleTitle">--title--</h2>
+                <h2 class="articleTitle">Article 2</h2>
                 <h2 class="articleGame">--game--</h2>
                 <h2 class="articleCurator">--curator--</h2>
             </div>
@@ -50,9 +44,9 @@
             <div class="articleSolution"><h2>Article solution</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro distinctio quae officiis hic accusantium quas iste omnis fugiat. Veritatis officia quia nihil, totam numquam architecto. Aut, nemo! Quas quasi fugiat, dignissimos, repellat commodi mollitia velit asperiores quis placeat eveniet fuga quisquam laboriosam ut natus optio temporibus iste praesentium, cupiditate magnam error? Reprehenderit placeat similique dignissimos cupiditate quae. Corrupti neque rem delectus deserunt sapiente consequuntur qui debitis aliquid officiis, accusantium perferendis maxime deleniti voluptas maiores consectetur quis similique, aut nesciunt! Est accusantium ipsum, dolor aspernatur magni numquam dignissimos necessitatibus porro molestiae obcaecati sit cupiditate, totam ab veritatis quam voluptatum repudiandae error consectetur, expedita rem nisi impedit ipsa. Cum neque maxime temporibus voluptatum nulla nemo, nisi aut. Quam eius suscipit officiis tempora.</p></div>
             <img src="/assets/graphics/images/among us 350px.jpg" class="articleImage"></img>
         </article>
-        <article id="thirdArticle" class="card">
+        <article id="thirdArticle" class="card" data-article="Third Article">
             <div class="articleMeta">
-                <h2 class="articleTitle">--title--</h2>
+                <h2 class="articleTitle">Article 3</h2>
                 <h2 class="articleGame">--game--</h2>
                 <h2 class="articleCurator">--curator--</h2>
             </div>
@@ -60,9 +54,9 @@
             <div class="articleSolution"><h2>Article solution</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro distinctio quae officiis hic accusantium quas iste omnis fugiat. Veritatis officia quia nihil, totam numquam architecto. Aut, nemo! Quas quasi fugiat, dignissimos, repellat commodi mollitia velit asperiores quis placeat eveniet fuga quisquam laboriosam ut natus optio temporibus iste praesentium, cupiditate magnam error? Reprehenderit placeat similique dignissimos cupiditate quae. Corrupti neque rem delectus deserunt sapiente consequuntur qui debitis aliquid officiis, accusantium perferendis maxime deleniti voluptas maiores consectetur quis similique, aut nesciunt! Est accusantium ipsum, dolor aspernatur magni numquam dignissimos necessitatibus porro molestiae obcaecati sit cupiditate, totam ab veritatis quam voluptatum repudiandae error consectetur, expedita rem nisi impedit ipsa. Cum neque maxime temporibus voluptatum nulla nemo, nisi aut. Quam eius suscipit officiis tempora.</p></div>
             <img src="/assets/graphics/images/among us 350px.jpg" class="articleImage"></img>
         </article>
-        <article id="fourthArticle" class="card">
+        <article id="fourthArticle" class="card" data-article="Fourth Article">
             <div class="articleMeta">
-                <h2 class="articleTitle">--title--</h2>
+                <h2 class="articleTitle">Article 4</h2>
                 <h2 class="articleGame">--game--</h2>
                 <h2 class="articleCurator">--curator--</h2>
             </div>
@@ -70,9 +64,9 @@
             <div class="articleSolution"><h2>Article solution</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro distinctio quae officiis hic accusantium quas iste omnis fugiat. Veritatis officia quia nihil, totam numquam architecto. Aut, nemo! Quas quasi fugiat, dignissimos, repellat commodi mollitia velit asperiores quis placeat eveniet fuga quisquam laboriosam ut natus optio temporibus iste praesentium, cupiditate magnam error? Reprehenderit placeat similique dignissimos cupiditate quae. Corrupti neque rem delectus deserunt sapiente consequuntur qui debitis aliquid officiis, accusantium perferendis maxime deleniti voluptas maiores consectetur quis similique, aut nesciunt! Est accusantium ipsum, dolor aspernatur magni numquam dignissimos necessitatibus porro molestiae obcaecati sit cupiditate, totam ab veritatis quam voluptatum repudiandae error consectetur, expedita rem nisi impedit ipsa. Cum neque maxime temporibus voluptatum nulla nemo, nisi aut. Quam eius suscipit officiis tempora.</p></div>
             <img src="/assets/graphics/images/among us 350px.jpg" class="articleImage"></img>
         </article>
-        <article id="fifthArticle" class="card">
+        <article id="fifthArticle" class="card" data-article="Fifth Article">
             <div class="articleMeta">
-                <h2 class="articleTitle">--title--</h2>
+                <h2 class="articleTitle">Article 5</h2>
                 <h2 class="articleGame">--game--</h2>
                 <h2 class="articleCurator">--curator--</h2>
             </div>
@@ -80,9 +74,9 @@
             <div class="articleSolution"><h2>Article solution</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro distinctio quae officiis hic accusantium quas iste omnis fugiat. Veritatis officia quia nihil, totam numquam architecto. Aut, nemo! Quas quasi fugiat, dignissimos, repellat commodi mollitia velit asperiores quis placeat eveniet fuga quisquam laboriosam ut natus optio temporibus iste praesentium, cupiditate magnam error? Reprehenderit placeat similique dignissimos cupiditate quae. Corrupti neque rem delectus deserunt sapiente consequuntur qui debitis aliquid officiis, accusantium perferendis maxime deleniti voluptas maiores consectetur quis similique, aut nesciunt! Est accusantium ipsum, dolor aspernatur magni numquam dignissimos necessitatibus porro molestiae obcaecati sit cupiditate, totam ab veritatis quam voluptatum repudiandae error consectetur, expedita rem nisi impedit ipsa. Cum neque maxime temporibus voluptatum nulla nemo, nisi aut. Quam eius suscipit officiis tempora.</p></div>
             <img src="/assets/graphics/images/among us 350px.jpg" class="articleImage"></img>
         </article>
-        <article id="sixthArticle" class="card">
+        <article id="sixthArticle" class="card" data-article="Sixth Article">
             <div class="articleMeta">
-                <h2 class="articleTitle">--title--</h2>
+                <h2 class="articleTitle">Article 6</h2>
                 <h2 class="articleGame">--game--</h2>
                 <h2 class="articleCurator">--curator--</h2>
             </div>
@@ -100,23 +94,46 @@
 
         </p>
 
-        <form name="subscriptionRequestForm">
-            <label for="username">desired username</label><br>
-            <input type="text" id="username" name="username" label="username" value="choose a username" minlength="5" required><br>
-            <label for="password">desired password</label><br>
-            <input type="password" id="password" name="password" label="password" value="choose a password" minlength="1" required><br>
-            <label for="email">your emailaddress</label><br>
-            <input type="email" id="email" name="email" label="email" value="email@example.com" required><br>
-            <p>Select what system(s) you play on</p>
-            <input type="checkbox" id="console" name="console"><label for="console">console</label>
-            <input type="checkbox" id="console" name="console"><label for="console">PC</label><br>
-            <input type="checkbox" id="console" name="console"><label for="console">mac (please don't)</label>
+        <form name="subscriptionRequestForm" action="#" method="post">
+            <div>
+                <label for="username">desired username</label><br>
+                <input type="text" id="username" name="username" label="username" value="username" minlength="5" required/>
+            </div>
+            <div>
+                <label for="password">desired password</label><br>
+                <input type="password" id="password" name="password" label="password" value="666666" minlength="1" required/><br>
+            </div>
+            <div>
+                <label for="email">your emailaddress</label><br>
+                <input type="email" id="email" name="email" label="email" value="email@example.com" required/><br>
+            </div>
+            <div id="formCheckBoxes">
+                <p>Select what system(s) you play on</p>
+                <input type="checkbox" id="console" name="console"><label for="console">console</label><br>
+                <input type="checkbox" id="pc" name="pc"><label for="pc">PC</label><br>
+                <input type="checkbox" id="mac" name="mac"><label for="mac">mac (please don't)</label>
+            </div>
+            <input type="submit" id="submit" value="get me inside!" id="subscriptionRequestFormSubmit">
         </form>
     </aside>
     <footer class="card">
+        <ul>
+            <li>making</li>
+            <li>some</li>
+            <li>space</li>
+            <li>over</li>
+            <li>here</li>
+            <li>so</li>
+            <li>there</li>
+            <li>is</li>
+            <li>a</li>
+            <li>little</li>
+            <li>extra</li>
+            <li>page</li>
+        </ul>
         <p>&copy; ColdCoffeeGaming.com <br>
             all rights reserved. Reusing or imitating anything found on this website, or anything that is marked by "coldcoffeegaming" is strictly prohibited and shall be answered by legal actions.</p>
     </footer>
-    <script src="/js/app.js"></script>    
+    <script src="js/app.js"></script>    
 </body>   
 </html>
