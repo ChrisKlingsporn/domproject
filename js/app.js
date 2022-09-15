@@ -21,10 +21,12 @@
 
 //     Set CSS class active state when the element is in the viewport. 
 
+
+
 const articles = document.querySelectorAll("article");
 function isSectionOnScreen(section){
     const box = section.getBoundingClientRect();
-    if (box.top <= 25 && box.bottom >= 10) {
+    if (box.top <= 25 && box.bottom >= 12) {
         return true;
     } 
     else {
@@ -32,28 +34,30 @@ function isSectionOnScreen(section){
     }
 }
 
+function activateSectionOnScroll(){
+    window.addEventListener("scroll",function(){
+        const navItems = document.querySelector(".navItems");
+        const navContainer = document.querySelector("nav");
+        navItems.classList.add("schticky");         //add "schticky" class to navItems  
+        navContainer.classList.add("schticky");
+        
+        for (const section of articles){    //[attr=value]
+            // const articleAnchor = document.querySelector("[href='#"+section.id+"']");
+            const articleAnchor = document.querySelector(`[href="#${section.id}"]`);         //use of template literal instead of the mess above
+            if (isSectionOnScreen(section)){
+                section.classList.add("active")
+                articleAnchor.parentElement.classList.add("active")         //add navListItem active states
+                    }
+            else{
+                section.classList.remove("active")
+                articleAnchor.parentElement.classList.remove("active")         //remove active states
 
-window.addEventListener("scroll",function(){
-    const navItems = document.querySelector(".navItems");
-    const navContainer = document.querySelector("nav");
-    navItems.classList.add("schticky");         //add "schticky" class to navItems  
-    navContainer.classList.add("schticky");
-    
-    for (const section of articles){    //[attr=value]
-        // const articleAnchor = document.querySelector("[href='#"+section.id+"']");
-        const articleAnchor = document.querySelector(`[href="#${section.id}"]`);         //use of template literal instead of the mess above
-        if (isSectionOnScreen(section)){
-            section.classList.add("active")
-            articleAnchor.parentElement.classList.add("active")         //add navListItem active states
-                }
-        else{
-            section.classList.remove("active")
-            articleAnchor.parentElement.classList.remove("active")         //remove active states
+            }
 
         }
+    })
+}
 
-    }
-})
                 //populate nav
 const articleList = document.querySelectorAll("[data-article]");            //setting <ul> as variable to work with
 function createNavigation(){            //function to populate listitems reference to amount of articles.
@@ -100,19 +104,14 @@ function createNavigation(){            //function to populate listitems referen
 //     })
 // }
 
+          
             //trigger createNavigation function only when DOM is fully loaded
-document.addEventListener("DOMContentLoaded", (event)=>{ // added eventlistener to the entire document
-    event.preventDefault(); // when event triggers is preventing default actions
-    console.log("DOM loaded successfully!");  // logging when dom is fully loaded
-    createNavigation(); // call function createNavigation.
+document.addEventListener("DOMContentLoaded", (event)=>{            // added eventlistener to the entire document
+    event.preventDefault();          // when event triggers is preventing default actions
+    console.log("DOM loaded successfully!");            // logging when dom is fully loaded
+    createNavigation();             // call function createNavigation.
+    activateSectionOnScroll()
 })
-
-            //validate either one of the 3 checkboxes is checked
-const itemForm = document.getElementById('formCheckBoxes');             // getting the parent container of all the checkbox inputs
-const  checkBoxes = itemForm.querySelectorAll('input[type="checkbox"]');            // get all the check box
-document.getElementById('submit').addEventListener('click',(e)=> {            //add a click event to the submit button
-    e.preventDefault();
-    CheckAnyTicked()});
 
 let noneTicked = true;          //default value set to true because none is ticked
 
@@ -129,3 +128,9 @@ function CheckAnyTicked() {                // this function will get called when
             alert(`Thank you for reaching out! We will reach out to you on ${document.getElementById("email").value}`);         //after succesful submission
     }
 }
+            //validate either one of the 3 checkboxes is checked
+const itemForm = document.getElementById('formCheckBoxes');             // getting the parent container of all the checkbox inputs
+const  checkBoxes = itemForm.querySelectorAll('input[type="checkbox"]');            // get all the check box
+document.getElementById('submit').addEventListener('click',(e)=> {            //add a click event to the submit button
+    e.preventDefault();
+    CheckAnyTicked()});
